@@ -1,0 +1,6 @@
+{
+    "name": "PummeloWeb",
+    "dependencies": {
+        "react": "15.0.1"
+    }
+}
