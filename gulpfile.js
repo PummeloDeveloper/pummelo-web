@@ -5,18 +5,7 @@ var webpack = require('webpack');
 var webpackConfig = require('./webpack.config.js');
 
 gulp.task('copyLibDir', function() {
-    var bowerConfig = {
-        name: 'PummeloWeb',
-        dependencies: {
-            react: '0.14.8'
-        }
-    };
-    bower({
-        name: 'PummeloWeb',
-        dependencies: {
-            react: '0.14.8'
-        }
-    });
+    bower();
     ['react'].map(function(comp) {
         gulp.src('bower_components/' + comp + '/**')
             .pipe(gulp.dest('build/lib/' + comp));
